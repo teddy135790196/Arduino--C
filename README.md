@@ -29,9 +29,18 @@
 
 ---
 
-## 📦 安裝與編譯
+## 📦 安裝與編譯與執行
 
 先安裝 wiringPi（如果系統沒有內建）：
 ```bash
 sudo apt-get update
 sudo apt-get install wiringpi
+
+## 📦 編譯
+
+```bash
+gcc dht11_reader.c -lwiringPi -o dht11
+
+
+##    執行
+./dht11 --pin 7 --interval 2000 --json
